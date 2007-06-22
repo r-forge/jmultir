@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<project name="JMulTi" default="dist" basedir=".">
+    <description>jmulti ant build file</description>
+<!-- set global properties for this build -->
+    <property name="src" location="java" />
+    <property name="build" location="classes" />
+    <property name="lib" location="C:/mksoft/shared_jars/jstatcom_jars" />
+    <property name="distpath" location="jmultiR" />
+    <property name="nsis" location="C:/Programme/NSIS/makensis.exe" />
+    <target name="init">
+<!-- Create the build directory structure used by compile  -->
+        <mkdir dir="${build}" />
+    </target>
+    <path id="class.path">
+        <fileset dir="${lib}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+    <target name="compile" depends="init" description="compile the source">
+<!-- Compile the java code from ${src} into ${build} -->
+        <javac srcdir="${src}" target = "5" destdir="${build}" classpathref="class.path" deprecation="on" optimize="on">
+            <compilerarg value="-Xlint:unchecked" />
+        </javac>
+    </target>
+    <target name="dist" depends="compile" description="generate the distribution">
+<!-- Create the distribution directory -->
+<!-- Put everything in ${build} into the jmulti.jar file -->
+<!-- for generating classpath property to put in MANIFEST automatically -->
+        <pathconvert property="class-path" dirsep="/" pathsep=" ">
+            <path refid="class.path"></path>
+            <map from="${lib}" to="lib" />
+      
+        </pathconvert>
+        <jar jarfile="jmulti.jar">
+            <fileset dir=".">
+                <include name="images/**" />
+                <include name="helpset/**" />
+                <include name="app.properties" />
+            </fileset>
+            <fileset dir="${build}">
+                <include name="**" />
+            </fileset>
+            <manifest>
+                <attribute name="Main-Class" value="de.jmulti.JM" />
+                <attribute name="Class-Path" value=". ${class-path}" />
+                <attribute name="License" value="GNU GPL" />
+            </manifest>
+        </jar>
+        <delete dir="${distpath}" />
+<!-- Create the base distribution directory -->
+        <mkdir dir="${distpath}" />
+        <delete dir="${build}" />
+        <copy todir="${distpath}">
+            <fileset dir=".">
+                <include name="log4j.properties" />       
+                <include name="dataset/**" />
+                <include name="jrstat/**" />
+                <include name="jmulti.jar" />
+                <include name="jmultiR.bat" />
+                <include name="help_context.xml" />
+                <include name="license.html" />
+                <include name="modules.xml" />
+                <include name="CHANGES" />
+                </fileset>
+        </copy>
+        <copy todir="${distpath}/lib">
+            <fileset dir="${lib}">
+                <include name="*.jar" />
+            </fileset>
+        </copy>
+        <zip destfile="jmultiR_win.zip">
+            <fileset dir=".">
+                <include name="jmultiR/**" />
+            </fileset>
+        </zip>
+<!-- Add remaining resources to create src distribution directory -->
+<!-- CVS is excluded automatically via default-excludes -->
+        <copy todir="${distpath}">
+            <fileset dir=".">
+                <include name="helpset/**" />
+                <include name="images/**" />
+                <include name="java/**" />
+                <include name=".classpath" />
+                <include name=".project" />
+                <include name="build.xml" />
+            </fileset>
+        </copy>
+        <zip destfile="jmultiR_src.zip">
+            <fileset dir=".">
+                <include name="jmultiR/**" />
+            </fileset>
+        </zip>
+        <delete dir="${distpath}" />
+    </target>
+</project>

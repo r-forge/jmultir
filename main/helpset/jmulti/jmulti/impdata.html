@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 1st February 2003), see www.w3.org">
+    <title></title>
+  </head>
+  <body>
+    <table width="600" align="center">
+      <tr>
+        <td>
+          <h2>
+            Importing Datasets
+          </h2>
+          <h3>
+            General Remark
+          </h3>
+          <p>
+            Data import is denoted with the symbol <img src=
+            "../images/import.gif" width="16" height="16">. It is
+            accessible from the toolbar and from the FILE menu.
+            Alternatively, one can use <a href=
+            "dragndrop.html">drag and drop</a> to import data files
+            conveniently. Data import is different from opening
+            <a href="pm.html">projects</a>.
+          </p>
+          <p>
+            Except for the JMulTi DAT format, the user must specify
+            the start date for the data to be imported. Afterwards,
+            the data import dialog displays the data to be loaded.
+            Only after the LOAD DATASET button is pressed the
+            variables are available for analysis.
+          </p>
+          <p>
+            <img src="../images/importdialog.gif" width="613"
+            height="548">
+          </p>
+          <p>
+            In general it is neither necessary nor recommended to
+            read in deterministic series that are either a
+            <i>trend</i>, an <i>intercept</i> or <i>seasonal
+            dummies</i>. JMulTi provides selection mechanisms to
+            add these terms to your model. It is meaningful to read
+            in every other kind of deterministic variables, like
+            dummies.
+          </p>
+          <h3>
+            Supported File Formats
+          </h3>
+          <ul>
+            <li>
+              <a href="#ASCII">data in columns</a> (ASCII)
+            </li>
+            <li>
+              <a href="#DAT">JMulTi <code>DAT</code> format</a>,
+              data in columns plus header (ASCII)
+            </li>
+            <li>
+              <a href="#EXCEL">Excel 97 <code>.xls</code> work
+              sheets</a>
+            </li>
+            <li>
+              <a href="#GAUSS_FMT">Gauss <code>.fmt</code>
+              (binary)</a>, all versions (Small Matrix v89,
+              Extended Matrix v89, Matrix v92, Universal Matrix
+              v96)
+            </li>
+            <li>
+              <a href="#GAUSS_DAT">Gauss <code>.dat</code>
+              (binary)</a>, all versions (Data Set v89, Extended
+              Data Set v89, Data Set v92, Data Set v96)
+            </li>
+            <li>
+              <a href="#MLAB">Matlab <code>.mat</code> Level 5
+              (binary)</a>, according to the specification document
+              "MAT-File Format Version 7" by Mathworks
+            </li>
+          </ul>
+          <p>
+            Data can also be <a href="expdata.html">exported</a> to
+            all supported file formats.
+          </p>
+          <h3>
+            ASCII Format<a name="ASCII"></a>
+          </h3>
+          <p>
+            An example pure ASCII data file looks like this:<br>
+            <br>
+             <code>/*seasonally adjusted, West Germany:<br>
+             fixed investment, disposable income, consumption
+            expenditures*/<br>
+             180 451 415<br>
+             179 465 421<br>
+             185 485 434<br>
+             ...<br>
+            <br></code> The description is optional. The
+            file should contain the data of each variable in a
+            column. When the file is opened, a dialog
+            <object classid=
+            "java:com.sun.java.help.impl.JHSecondaryViewer">
+              <param name="content" value=
+              "popups/asciidialog.html">
+              <param name="viewerActivator" value=
+              "javax.help.LinkLabel">
+              <param name="iconByID" value="popup_icon">
+              <param name="text" value="?">
+              <param name="viewerSize" value="600,650">
+              <param name="viewerStyle" value=
+              "javax.help.SecondaryWindow">
+            </object>will appear. It is possible to add a
+            description of the dataset by putting <code>/*
+            description... */</code> somewhere in the file. The
+            description can be displayed in JMulTi.
+          </p>
+          <h3>
+            JMulTi DAT Format Version 2 <a name="DAT"></a>
+          </h3>(The format of the start date specification has
+          changed in comparison to DAT version 1, but older
+          versions are still supported. However, the use of version
+          2 is encouraged.) 
+          <p>
+            An example data file looks like this:<br>
+            <br>
+             <code>/*seasonally adjusted, West Germany:<br>
+             fixed investment, disposable income, consumption
+            expenditures*/<br>
+             &lt;1960 Q1&gt;<br>
+             invest income cons<br>
+             180 451 415<br>
+             179 465 421<br>
+             185 485 434<br>
+             ...<br>
+            <br></code> JMulTi has a format that allows you to read in
+            datasets without being asked for any additional
+            information. It is a slight extension of the pure ASCII
+            format described in the previous section. The start date
+            must be a valid date specification enclosed in &lt; &gt;,
+            see <a href="dates.html">dates</a>.  Variable names should
+            appear over the columns with the data. The example data
+            files that come with JMulTi are in the DAT format.
+          </p>
+          <h3>
+            Excel Format<a name="EXCEL"></a>
+          </h3>
+          <p>
+            JMulTi can read in files in the Excel 97/2000 Format.
+            There is an appropriate file filter for
+            <code>*.xls</code> files. When the file is opened then
+            there appears a dialog <object classid=
+            "java:com.sun.java.help.impl.JHSecondaryViewer">
+              <param name="content" value=
+              "popups/exceldialog.html">
+              <param name="viewerActivator" value=
+              "javax.help.LinkLabel">
+              <param name="iconByID" value="popup_icon">
+              <param name="text" value="?">
+              <param name="viewerSize" value="490,600">
+              <param name="viewerStyle" value=
+              "javax.help.SecondaryWindow">
+            </object>. The Excel file reader recognizes the first
+            entries in each column as variable names. If there are
+            no variable names or only numbers, it creates variable
+            names from an index. It then starts reading in the
+            values of all columns from the 1st row with a
+            recognized number. It finishes reading in the last row
+            with a recognized number.<br>
+            <br>
+             Every value that is not a number will be coded as NaN.
+            The easiest way is to provide an Excel file with the
+            variable names in the first row and the values starting
+            in one of the next rows. Cells with formulas are
+            interpreted as well.
+          </p>
+          <h3>
+            Gauss <code>.fmt</code> Format<a name="GAUSS_FMT"></a>
+          </h3>
+          <p>
+            The binary matrix file format used by the Gauss
+            software (www.aptech.com) can be imported to JMulTi. It
+            is described in the Gauss User's Guide. Only numerical
+            data is read. All versions are supported.
+          </p>
+          <h3>
+            Gauss <code>.dat</code> Format<a name="GAUSS_DAT"></a>
+          </h3>
+          <p>
+            The binary dataset file format used by the Gauss software
+            (www.aptech.com) can be imported to JMulTi. It is
+            described in the Gauss User's Guide. Variable names are
+            correctly interpreted. Only numerical data is
+            read. All versions are supported.
+          </p>
+          <h3>
+            Matlab <code>.mat</code> Format<a name="MLAB"></a>
+          </h3>
+          <p>
+            The binary <code>.mat</code> file format level 5 used
+            by the Matlab software (www.mathworks.com) can be
+            imported to JMulTi. It is described in the
+            specification document "MAT-File Format Version 7".
+            Only numerical data is read up to 2-dimensional
+            arrays. Higher-dimensional arrays and all other data is
+            ignored. Variable names are correctly interpreted.
+            Level 4 <code>.mat</code> files are not supported.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

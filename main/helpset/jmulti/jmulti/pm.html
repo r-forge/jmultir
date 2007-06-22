@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 1st February 2003), see www.w3.org">
+    <title></title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <table width="600" align="center">
+      <tr>
+        <td>
+          <h2>
+            Project Management
+          </h2>
+          <h3>
+            Description
+          </h3>
+          <p>
+            Project management in JMulTi makes it possible to store
+            data, output, and the model settings for each module in
+            a single file. This way it is possible to restore the
+            state of an analysis conveniently. JMulTi project files
+            are in an XML format with the suffix <code>.jsc</code>.
+            Projects that have previously been loaded and the
+            currently loaded project appear in the explorer panel.
+            This allows to switch quickly between them by a double
+            click.
+          </p>
+          <h3>
+            Open and Save
+          </h3>
+          <p>
+            After a project has been loaded, it appears in the
+            explorer panel tagged with the <img src=
+            "../images/currentproject.gif"> symbol. To open a
+            project there are different possibilities:
+          </p>
+          <ul>
+            <li>
+              drag and drop project files to the explorer bar
+            </li>
+            <li>
+              use the <img src="../images/openproject.gif"> button
+              from the FILE menu or the toolbar
+            </li>
+            <li>
+              double click on an existing project in the explorer
+              bar
+            </li>
+          </ul>
+          <p>
+            To save the current state of the analysis to a project
+            file, the SAVE AS button <img src=
+            "../images/saveprojectas.gif"> should be used. A
+            configure dialog will appear.
+          </p>
+          <p>
+            It is also possible to save the analysis to an already
+            existing project with its RIGHT mouse popup and the
+            SAVE CURRENT STATE HERE option.
+          </p>
+          <p align="center">
+            <img src="../images/project_popup.gif" width="243"
+            height="274">
+          </p>
+          <h3>
+            Configuring Projects
+          </h3>
+          <p>
+            The project configuration dialog appears when the SAVE
+            AS button is pressed or when the EDIT item is selected
+            from a projects RIGHT mouse popup. Adjustable settings:
+          </p>
+          <ul>
+            <li>
+              <b>project name:</b> the project appears in the
+              explorer panel with that name, it does not have to be
+              unique
+            </li>
+            <li>
+              <b>file:</b> the file to which the project is stored,
+              it always gets the suffix <code>.jsc</code> even if
+              not specified, if a file is chosen that already
+              belongs to another project, that other project will
+              be removed from the explorer panel and is overwritten
+              with the new project
+            </li>
+            <li>
+              <b>project description:</b> an optional description
+              for the project
+            </li>
+            <li>
+              <b>data description:</b> an optional description for
+              the data that is stored with a project, there might
+              be different data types in the future, currently only
+              <i>Time Series Data</i> is available, the default
+              entry are the data descriptions of all imported
+              series
+            </li>
+          </ul><br>
+          <br>
+           
+          <p>
+            <img src="../images/project_dialog.gif" width="912"
+            height="629">
+          </p>
+          <h3>
+            Managing projects
+          </h3>
+          <p>
+            All recently opened projects appear in the explorer
+            bar. This should make it very easy to switch between
+            different analyses. Elements from this list can be
+            deleted by selecting them and pressing the DEL button
+            or by using the RIGHT mouse popup menu. New projects
+            can be put to the list and are instantly loaded via
+            drag and drop. 
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

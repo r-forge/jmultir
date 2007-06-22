@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JHelpContextMgr xmlns="java:com.jstatcom.component">
+  <JHelpContextMgr$ContextID class="com.jstatcom.io.TSImportPanel" helpid="jmulti.impdata"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.PlotPanel" helpid="initanal.node1"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.StatsPanel" helpid="initanal.node2"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.tools.SpectrumPanel" helpid="initanal.node4"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.AutocorrPanel" helpid="initanal.node3"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.CrossPlotPanel" helpid="initanal.node5"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.ADFPanel" helpid="initanal.node8"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.SPPanel" helpid="initanal.node9"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.KPSSPanel" helpid="initanal.node10"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.HegyPanel" helpid="initanal.node11"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.StructBreakPanel" helpid="initanal.node12"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.JohansenPanel" helpid="initanal.node16"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.initanal.SLCointPanel" helpid="initanal.node17"/>
+  <JHelpContextMgr$ContextID class="com.jstatcom.ts.TSCalculatorPanel" helpid="jmulti.tscalc"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.tools.FEVDPanel" helpid="varmodels.node12"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.var.VARSpecifyModelPanel" helpid="varmodels.node3"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.var.VAREstCoeffPanel" helpid="varmodels.node2"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.var.VARSubSetPanel" helpid="varmodels.node4"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.var.VARResidualAnalysis" helpid="varmodels.node5"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.tools.MultDiagTests" helpid="varmodels.node6"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.tools.CorrPanel" helpid="varmodels.node7"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.var.VARStabilityPanel" helpid="varmodels.node8"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.var.VARRecursCoeff" helpid="varmodels.node8_SECTION00081000000000000000"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.var.VARRecResPanel" helpid="varmodels.node8_SECTION00082000000000000000"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.var.VARCusumPanel" helpid="varmodels.node8_SECTION00083000000000000000"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.tools.ChowTestPanel" helpid="varmodels.node8_SECTION00084000000000000000"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.str.STR_SelectAR" helpid="strmodels.node1"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.str.STR_SubsetAR" helpid="strmodels.node2"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.str.STR_TestNonlinAlt" helpid="strmodels.node3"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.str.STR_GridSearch" helpid="strmodels.node5"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.str.STR_Estimate" helpid="strmodels.node6"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.str.STR_Diagnos" helpid="strmodels.node7"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.str.STR_GraphicalAnalysis" helpid="strmodels.node8"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.cafpe.CAFPE_sel" helpid="nonpar.node8"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.cafpe.CAFPE_est" helpid="nonpar.node9"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.cafpe.CAFPE_forecast" helpid="nonpar.node12"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.cafpe.CAFPE_diagTests" helpid="nonpar.node10"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.cafpe.CAFPE_volatest" helpid="nonpar.node11"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.cafpe.CAFPE_volatsel" helpid="nonpar.node11"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.arch.ARCHAnalysisPanel" helpid="archmodels.node1"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.arch.MultARCHAnalysisPanel" helpid="archmodels.node1"/>
+
+  <JHelpContextMgr$ContextID class="de.jmulti.arima.EstPanel" helpid="arimamodels.node3"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.arima.ForecastPanel" helpid="arimamodels.node5"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.arima.DiagTestsPanel" helpid="arimamodels.node4"/>
+  <JHelpContextMgr$ContextID class="de.jmulti.arima.SpecPanel" helpid="arimamodels.node1"/>
+</JHelpContextMgr>
+

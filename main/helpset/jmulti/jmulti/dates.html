@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 1st February 2003), see www.w3.org">
+    <title></title>
+  </head>
+  <body>
+    <table width="600" align="center">
+      <tr>
+        <td>
+          <h2>
+            Numbers, Dates, Variable Names
+          </h2>
+          <h3>
+            Numbers
+          </h3>All real numbers are stored as 8-byte double
+          precision values. Missing values are coded with
+          <code>NaN</code>. Number input with exponential notation
+          (e.g. 1.1234e-2) is possible. 
+          <h3>
+            Dates
+          </h3>The following date formats are possible: 
+          <ul>
+            <li>
+              quarterly: "1960 Q2"
+            </li>
+            <li>
+              monthly: "1960 M10"
+            </li>
+            <li>
+              annual: "1960"
+            </li>
+            <li>
+              semi-annual: "1960 I" or "1960 II"
+            </li>
+            <li>
+              daily (5 day week): "11/25/2004 (5)"
+            </li>
+            <li>
+              daily (7 day week): "12/11/1982 (7)"
+            </li>
+            <li>
+              undated: "1"
+            </li>
+            <li>
+              arbitrary spec: "1960 30/265"
+            </li>
+          </ul>Dates can always be coded in the form
+          <code>MAIN_PERIOD SUB_PERIOD/FREQUENCY</code>, e.g.
+          "1950 3/4". 
+          <h3>
+            Variable Names
+          </h3>Variable names can contain letters, digits and '_'.
+          All other characters as not allowed and will result in an
+          error message. A variable name must start with a non
+          digit.
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

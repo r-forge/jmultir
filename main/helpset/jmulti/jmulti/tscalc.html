@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 1st February 2003), see www.w3.org">
+    <title></title>
+  </head>
+  <body>
+    <h2>
+      Time Series Calculator
+    </h2>
+    <p>
+      The <i>TS Calculator</i> can be used to create new variables
+      by combining existing ones with arithmetic expressions. It
+      provides the simple language <i>TSCalc</i> that operates with
+      one dimensional arrays and scalars. Examples are:<br>
+      <br>
+       <code>newvar = invest + cons;</code><br>
+       <code>invest(-1) = lagn(invest,-1);</code><br>
+       <code>invest_std = stand(invest);</code><br>
+       <code>z = rndn(100);</code><br>
+       <code>z;</code>
+    </p>
+    <p>
+      The code that was used for the generation of new series is
+      used as a description of new variables. This description can
+      be accessed via the SHOW DESCRIPTION item from the popup menu
+      over the time series in the <a href=
+      "popups/selectpanel.html">selector</a>. This way it is possible to
+      keep the information on how a set of series was created.
+    </p>
+    <p>
+      The operation is as follows:
+    </p>
+    <ul>
+      <li>
+        First select the variables to be used in the selector. The
+        names appear in the list AVAILABLE VARIABLES and are put
+        into the variable space of the calculator.
+      </li>
+      <li>
+        Write one or more commands to the command area an execute
+        them with EXECUTE or <code>Ctrl+E</code>. Newly created
+        variables appear in the list of available variables.
+      </li>
+      <li>
+        Finally add the selected variables in AVAILABLE VARIABLES
+        to the workspace with ADD SELECTED.
+      </li>
+    </ul>
+    <p>
+      Variable names must start with a non digit and may contain
+      letters, digits and '_'. They are case insensitive. Define a
+      new variable with <code>newvariable = some expression
+      ;</code>. One can execute several commands at once by
+      separating them with <code>;</code>. If a variable should be
+      printed to the output window, just write
+      <code>variablename;</code>. All array operations are applied
+      element wise. <i>TSCalc</i> understands exponential notation,
+      e.g. <code>1.234e-3</code>.
+    </p>
+    <p>
+      The following functions are implemented, where <i>a, b</i>
+      are always a one dimensional arrays, e.g. a variable name,
+      and <i>c</i> is a scalar:
+    </p>
+    <ul>
+        <li>
+        max(a,b) - takes 2 vectors of same dimension and returns
+        vector with max elements
+      </li>
+      <li>
+        min(a,b) - takes 2 vectors of same dimension and returns
+        vector with min elements
+      </li>
+      <li>
+        log(a)
+      </li>
+      <li>
+        lagn(a,c) - lags vector a by c periods and fills missings
+        with NaN values
+      </li>
+	  <li>
+	  	fracdiff(a,c) - fractional differencing operator (Hosking 1981)
+	  </li>
+      <li>
+        stdc(a) - returns std. deviation of vector a
+      </li>
+      <li>
+        meanc(a) - returns mean of vector a
+      </li>
+      <li>
+        stand(a) - standardizes vector a by subtracting the mean
+        and dividing by its std. deviation
+      </li>
+      <li>
+        reverse(a) - reverses the order of a given vector, starting
+        from observation T to 1
+      </li>
+      <li>
+        rndn(c) - generates a c x 1 vector of random variables
+        between 0 and 1
+      </li>
+      <li>
+        ones(c) - generates a c x 1 vector of ones
+      </li>
+      <li>
+        trend(c) - generates a c x 1 trend vector starting from 1
+        to c
+      </li>
+      <li>
+        rows(a)
+      </li>
+      <li>
+        sqrt(a)
+      </li>
+	   <li>
+        sin(a)
+      </li>
+      <li>
+        cos(a)
+      </li>
+      <li>
+        tan(a)
+      </li>
+
+    </ul>
+    <p>
+      By double clicking on a variable in the list, the name
+      appears in the command window and can be combined with
+      commands from the calculator. In case there are syntax
+      errors, a descriptive message is printed to the output
+      window. One should correct the error and simply try again. If
+      the selection in the time series selector is changed, the
+      workspace of the calculator is overwritten. Variables that
+      have not been added to the workspace before are lost.
+    </p>
+    <center>
+      <img src="../images/createnew.gif" alt=
+      "Time Series Calculator" vspace="10">
+    </center>
+  </body>
+</html>

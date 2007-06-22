@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 1st February 2003), see www.w3.org">
+    <title></title>
+  </head>
+  <body>
+    <table width="600" align="center">
+      <tr>
+        <td>
+          <h2>
+            Transforming Time Series
+          </h2>
+          <h3>
+            General Remark
+          </h3>The transform dialog <object classid=
+          "java:com.sun.java.help.impl.JHSecondaryViewer">
+            <param name="content" value=
+            "popups/transformdialog.html">
+            <param name="viewerActivator" value=
+            "javax.help.LinkLabel">
+            <param name="iconByID" value="popup_icon">
+            <param name="text" value="?">
+            <param name="viewerSize" value="490,700">
+            <param name="viewerStyle" value=
+            "javax.help.SecondaryWindow">
+          </object> can be accessed by a RIGHT mouse click over one
+          or more selected time series in the time series list
+          <object classid=
+          "java:com.sun.java.help.impl.JHSecondaryViewer">
+            <param name="content" value="popups/selectpanel.html">
+            <param name="viewerActivator" value=
+            "javax.help.LinkLabel">
+            <param name="iconByID" value="popup_icon">
+            <param name="text" value="?">
+            <param name="viewerSize" value="490,900">
+            <param name="viewerStyle" value=
+            "javax.help.SecondaryWindow">
+          </object>. 
+          <h3>
+            Differences
+          </h3>If differences of a selected series are taken then
+          the start date of the newly created differenced series is
+          adjusted automatically. 
+          <h3>
+            Suffixes
+          </h3>
+          <ul>
+            <li>
+              <code>_d1</code> first differences: y(t) - y(t-1)
+            </li>
+            <li>
+              <code>_d1_d1</code> second differences: [y(t) - y(t-1)] -  [y(t-1) - y(t-2)]
+            </li>
+            <li>
+              <code>_dseas</code> seasonal differences: y(t) - y(t-freq)
+            </li>
+            <li>
+              <code>_log</code> logarithm (levels): ln(y(t))
+            </li>
+            <li>
+              <code>_log_d1</code> 1st differences of logarithms: ln(y(t)) - ln(y(t-1))
+            </li>
+            <li>
+              <code>_log_d1_d1</code> 2nd differences of logarithms: [ln(y(t)) - ln(y(t-1))] - [ln(y(t-1)) - ln(y(t-2))] 
+            </li>
+            <li>
+              <code>_log_dseas</code> seasonal differences of	logarithms:	ln(y(t)) - ln(y(t-freq))
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

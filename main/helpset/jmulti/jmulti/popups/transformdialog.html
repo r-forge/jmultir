@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org">
+
+    <title></title>
+  </head>
+
+  <body>
+    <h2>Transform Dialog</h2>
+
+    <p>The transform dialog allows to do the most common transform
+    operations on the set of selected time series. The
+    transformation results in new series which are added to the
+    time series list with a descriptive suffix, indicating the type
+    of the transformation.</p>
+
+    <ul>
+      <li>If LOGARITHM is selected, then
+      the natural logarithm of the series is taken. An error
+      message is generated if there are values <code>&lt;=0</code>
+      in the series to transform.</li>
+
+      <li>LEVEL means that no differences are taken.
+      Seasonal differences are not possible with series that have
+      frequency 1.</li>
+
+      <li>A difference transformation together with the logarithm
+      results in differences of logarithms of the original
+      series.</li>
+
+      <li>If LEVEL is selected and the LOGARITHM is not checked, then
+      nothing is done.</li>
+    </ul>
+    <center>
+     <img src="../../images/transform.gif" alt="Transform Dialog">
+    </center>
+  </body>
+</html>
+

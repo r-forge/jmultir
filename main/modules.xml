@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TopFrame$XMLRep xmlns="java:com.jstatcom.component" name="JMulTi">
+	<Module helpset="helpset/jmulti/JMulTi.hs" />
+	<Module class="de.jmulti.initanal.InitAnalFrame"
+		helpset="helpset/initanal/InitAnal.hs" />
+	<Module class="de.jmulti.var.VAR"
+		helpset="helpset/varmodels/VARmodels.hs" method="getInternalFrame" />
+	<Module class="de.jmulti.vecm.VECM"
+		helpset="helpset/vecmodels/VECM.hs" method="getInternalFrame" />
+	<Module class="de.jmulti.arch.ARCHAnalysisFrame"
+		helpset="helpset/arch/ARCHModels.hs" />
+	<Module class="de.jmulti.str.STR_Frame"
+		helpset="helpset/str/STR.hs" />
+	<Module class="de.jmulti.cafpe.CAFPE_NonParamFrame"
+		helpset="helpset/nonpar/NonPar.hs" />
+	<Module class="de.jmulti.arima.ARIMAFrame"
+		helpset="helpset/arima/ArimaHelp.hs"/>
+</TopFrame$XMLRep>
