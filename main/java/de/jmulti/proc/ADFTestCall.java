@@ -250,7 +250,7 @@ public final class ADFTestCall extends RPCall {
         JSCNArray seasDum = new JSCNArray("seasDum");
         if (isSeasDum)
             seasDum = new JSCNArray("seasDum", range
-                    .createSeasDum(false, false));
+                    .createSeasDum(true, false));
 
         adf_result = (JSCNArray) ADF_RESULT.getInstance();
         adf_result.setJSCProperty(RArgProps.RLIST_KEY, "est");
