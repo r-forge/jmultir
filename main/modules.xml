@@ -11,8 +11,6 @@
 		helpset="helpset/arch/ARCHModels.hs" />
 	<Module class="de.jmulti.str.STR_Frame"
 		helpset="helpset/str/STR.hs" />
-	<Module class="de.jmulti.cafpe.CAFPE_NonParamFrame"
-		helpset="helpset/nonpar/NonPar.hs" />
 	<Module class="de.jmulti.arima.ARIMAFrame"
 		helpset="helpset/arima/ArimaHelp.hs"/>
 </TopFrame$XMLRep>
