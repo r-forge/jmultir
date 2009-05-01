@@ -19,8 +19,8 @@
 
 package de.jmulti.arch;
 
-import javolution.xml.XmlElement;
-import javolution.xml.XmlFormat;
+import javolution37.javolution.xml.XmlElement;
+import javolution37.javolution.xml.XmlFormat;
 
 import com.jstatcom.model.JSCNArray;
 import com.jstatcom.model.SymbolTable;
@@ -33,177 +33,177 @@ import com.jstatcom.ts.Selection;
  * @author <a href="mailto:mk@mk-home.de">Markus Kraetzig </a>
  */
 public final class ARCHProjectState implements ProjectState {
-    private SymbolTable symbolTableGlobal = null;
+	private SymbolTable symbolTableGlobal = null;
 
-    private SymbolTable symbolTableUni = null;
+	private SymbolTable symbolTableUni = null;
 
-    private SymbolTable symbolTableMult = null;
+	private SymbolTable symbolTableMult = null;
 
-    private Selection selectionMult = null;
+	private Selection selectionMult = null;
 
-    private Selection selectionUni = null;
+	private Selection selectionUni = null;
 
-    private JSCNArray uniModelSel = null;
+	private JSCNArray uniModelSel = null;
 
-    /**
-     * XML format field for (de)serialization.
-     */
-    public static final XmlFormat<ARCHProjectState> ARCHProjectState_XML = new XmlFormat<ARCHProjectState>(
-            ARCHProjectState.class) {
-        public void format(ARCHProjectState data, XmlElement xml) {
-            xml.add(data.symbolTableGlobal);
-            xml.add(data.symbolTableUni);
-            xml.add(data.symbolTableMult);
-            xml.add(data.selectionUni);
-            xml.add(data.selectionMult);
-            xml.add(data.uniModelSel);
-        }
+	/**
+	 * XML format field for (de)serialization.
+	 */
+	public static final XmlFormat<ARCHProjectState> ARCHProjectState_XML = new XmlFormat<ARCHProjectState>(
+			ARCHProjectState.class) {
+		public void format(ARCHProjectState data, XmlElement xml) {
+			xml.add(data.symbolTableGlobal);
+			xml.add(data.symbolTableUni);
+			xml.add(data.symbolTableMult);
+			xml.add(data.selectionUni);
+			xml.add(data.selectionMult);
+			xml.add(data.uniModelSel);
+		}
 
-        public ARCHProjectState parse(XmlElement xml) {
-            ARCHProjectState state = new ARCHProjectState();
-            if (xml.hasNext()) {
-                SymbolTable table = (SymbolTable) xml.getNext();
-                if (table != null)
-                    state.setSymbolTableGlobal(table);
-            }
-            if (xml.hasNext()) {
-                SymbolTable table = (SymbolTable) xml.getNext();
-                if (table != null)
-                    state.setSymbolTableUni(table);
-            }
-            if (xml.hasNext()) {
-                SymbolTable table = (SymbolTable) xml.getNext();
-                if (table != null)
-                    state.setSymbolTableMult(table);
-            }
-            if (xml.hasNext()) {
-                Selection sel = (Selection) xml.getNext();
-                if (sel != null)
-                    state.setSelectionUni(sel);
-            }
-            if (xml.hasNext()) {
-                Selection sel = (Selection) xml.getNext();
-                if (sel != null)
-                    state.setSelectionMult(sel);
-            }
-            if (xml.hasNext()) {
-                JSCNArray sel = (JSCNArray) xml.getNext();
-                if (sel != null)
-                    state.setUniModelSel(sel);
-            }
+		public ARCHProjectState parse(XmlElement xml) {
+			ARCHProjectState state = new ARCHProjectState();
+			if (xml.hasNext()) {
+				SymbolTable table = (SymbolTable) xml.getNext();
+				if (table != null)
+					state.setSymbolTableGlobal(table);
+			}
+			if (xml.hasNext()) {
+				SymbolTable table = (SymbolTable) xml.getNext();
+				if (table != null)
+					state.setSymbolTableUni(table);
+			}
+			if (xml.hasNext()) {
+				SymbolTable table = (SymbolTable) xml.getNext();
+				if (table != null)
+					state.setSymbolTableMult(table);
+			}
+			if (xml.hasNext()) {
+				Selection sel = (Selection) xml.getNext();
+				if (sel != null)
+					state.setSelectionUni(sel);
+			}
+			if (xml.hasNext()) {
+				Selection sel = (Selection) xml.getNext();
+				if (sel != null)
+					state.setSelectionMult(sel);
+			}
+			if (xml.hasNext()) {
+				JSCNArray sel = (JSCNArray) xml.getNext();
+				if (sel != null)
+					state.setUniModelSel(sel);
+			}
 
-            return state;
-        }
-    };
+			return state;
+		}
+	};
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.jstatcom.project.ProjectState#getHandlerID()
-     */
-    public String getHandlerID() {
-        return ARCHAnalysisFrame.class.getName();
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.jstatcom.project.ProjectState#getHandlerID()
+	 */
+	public String getHandlerID() {
+		return ARCHAnalysisFrame.class.getName();
+	}
 
-    /**
-     * @return
-     */
-    public SymbolTable getSymbolTableGlobal() {
-        return symbolTableGlobal;
-    }
+	/**
+	 * @return
+	 */
+	public SymbolTable getSymbolTableGlobal() {
+		return symbolTableGlobal;
+	}
 
-    /**
-     * @param symbolTableGlobal
-     */
-    public void setSymbolTableGlobal(SymbolTable symbolTableGlobal) {
-        if (symbolTableGlobal == null)
-            throw new IllegalArgumentException("Argument was null.");
+	/**
+	 * @param symbolTableGlobal
+	 */
+	public void setSymbolTableGlobal(SymbolTable symbolTableGlobal) {
+		if (symbolTableGlobal == null)
+			throw new IllegalArgumentException("Argument was null.");
 
-        this.symbolTableGlobal = symbolTableGlobal;
-    }
+		this.symbolTableGlobal = symbolTableGlobal;
+	}
 
-    /**
-     * @return
-     */
-    public SymbolTable getSymbolTableMult() {
-        return symbolTableMult;
-    }
+	/**
+	 * @return
+	 */
+	public SymbolTable getSymbolTableMult() {
+		return symbolTableMult;
+	}
 
-    /**
-     * @param symbolTableMult
-     */
-    public void setSymbolTableMult(SymbolTable symbolTableMult) {
-        if (symbolTableMult == null)
-            throw new IllegalArgumentException("Argument was null.");
+	/**
+	 * @param symbolTableMult
+	 */
+	public void setSymbolTableMult(SymbolTable symbolTableMult) {
+		if (symbolTableMult == null)
+			throw new IllegalArgumentException("Argument was null.");
 
-        this.symbolTableMult = symbolTableMult;
-    }
+		this.symbolTableMult = symbolTableMult;
+	}
 
-    /**
-     * @return
-     */
-    public SymbolTable getSymbolTableUni() {
-        return symbolTableUni;
-    }
+	/**
+	 * @return
+	 */
+	public SymbolTable getSymbolTableUni() {
+		return symbolTableUni;
+	}
 
-    /**
-     * @param symbolTableUni
-     */
-    public void setSymbolTableUni(SymbolTable symbolTableUni) {
-        if (symbolTableUni == null)
-            throw new IllegalArgumentException("Argument was null.");
+	/**
+	 * @param symbolTableUni
+	 */
+	public void setSymbolTableUni(SymbolTable symbolTableUni) {
+		if (symbolTableUni == null)
+			throw new IllegalArgumentException("Argument was null.");
 
-        this.symbolTableUni = symbolTableUni;
-    }
+		this.symbolTableUni = symbolTableUni;
+	}
 
-    /**
-     * @return
-     */
-    public Selection getSelectionMult() {
-        return selectionMult;
-    }
+	/**
+	 * @return
+	 */
+	public Selection getSelectionMult() {
+		return selectionMult;
+	}
 
-    /**
-     * @param selectionMult
-     */
-    public void setSelectionMult(Selection selectionMult) {
-        if (selectionMult == null)
-            throw new IllegalArgumentException("Argument was null.");
+	/**
+	 * @param selectionMult
+	 */
+	public void setSelectionMult(Selection selectionMult) {
+		if (selectionMult == null)
+			throw new IllegalArgumentException("Argument was null.");
 
-        this.selectionMult = selectionMult;
-    }
+		this.selectionMult = selectionMult;
+	}
 
-    /**
-     * @return
-     */
-    public Selection getSelectionUni() {
-        return selectionUni;
-    }
+	/**
+	 * @return
+	 */
+	public Selection getSelectionUni() {
+		return selectionUni;
+	}
 
-    /**
-     * @param selectionUni
-     */
-    public void setSelectionUni(Selection selectionUni) {
-        if (selectionUni == null)
-            throw new IllegalArgumentException("Argument was null.");
+	/**
+	 * @param selectionUni
+	 */
+	public void setSelectionUni(Selection selectionUni) {
+		if (selectionUni == null)
+			throw new IllegalArgumentException("Argument was null.");
 
-        this.selectionUni = selectionUni;
-    }
+		this.selectionUni = selectionUni;
+	}
 
-    /**
-     * @return
-     */
-    public JSCNArray getUniModelSel() {
-        return uniModelSel;
-    }
+	/**
+	 * @return
+	 */
+	public JSCNArray getUniModelSel() {
+		return uniModelSel;
+	}
 
-    /**
-     * @param uniModelSel
-     */
-    public void setUniModelSel(JSCNArray uniModelSel) {
-        if (uniModelSel == null)
-            throw new IllegalArgumentException("Argument was null.");
+	/**
+	 * @param uniModelSel
+	 */
+	public void setUniModelSel(JSCNArray uniModelSel) {
+		if (uniModelSel == null)
+			throw new IllegalArgumentException("Argument was null.");
 
-        this.uniModelSel = uniModelSel;
-    }
+		this.uniModelSel = uniModelSel;
+	}
 }
